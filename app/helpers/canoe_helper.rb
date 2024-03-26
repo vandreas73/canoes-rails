@@ -1,0 +1,2 @@
+module CanoeHelper
+end

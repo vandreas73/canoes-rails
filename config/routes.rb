@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
-  get 'competitions/list'
-  get 'competition/new'
-  get 'competition/edit'
-  get 'competition/del'
-  get 'crew/list'
-  get 'crew_member/new'
-  get 'crew_member/edit'
-  get 'crew_member/del'
-  get 'canoe/new'
-  get 'canoe/edit'
-  get 'canoe/del'
-  get 'canoes/list'
+  get 'competitions/index'
+  get 'competitions/new'
+  get 'competitions/edit'
+  get 'crew/index'
+  get 'crew/new'
+  get 'crew/edit'
+  get 'canoes/new'
+  get 'canoes/edit'
+  get 'canoes/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

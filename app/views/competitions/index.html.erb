@@ -1,0 +1,26 @@
+<div class="container">
+        <h2>Competitions</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% @competitions.each do |competition| %>
+                <tr>
+                    <td><%= competition.name %></td>
+                    <td><%= competition.date %></td>
+                    <td>
+                        <%= link_to "Edit", "/competitions/edit", class: "btn btn-warning btn-sm link-light" %>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+        <%= link_to "Back", :back, class: "btn btn-primary" %>
+    </div>

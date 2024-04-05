@@ -1,4 +1,3 @@
-<h1>Canoes</h1>
 
 <div class="container">
     <h2>Canoes</h2>
@@ -16,17 +15,20 @@
                 <td><%= canoe.name %></td>
                 <td><%= canoe.max_crew %></td>
                 <td>
-                    <%= link_to "Crew", '/crew/list', class: "btn btn-primary btn-sm" %>
+                    <%= link_to "Crew", '/crew/index', class: "btn btn-primary btn-sm" %>
                 </td>
                 <td>
-                    <%= link_to "Edit", '/canoe/edit', class: "btn btn-warning btn-sm link-light" %>
+                    <%= link_to "Competitions", '/competitions/index', class: "btn btn-primary btn-sm" %>
                 </td>
                 <td>
-                    <%= link_to "Delete", '/canoe/del', class: "btn btn-danger btn-sm" %>
+                    <%= link_to "Edit", '/canoes/edit', class: "btn btn-warning btn-sm link-light" %>
+                </td>
+                <td>
+                    <%= link_to "Delete", '/canoes/del', class: "btn btn-danger btn-sm" %>
                 </td>
             </tr>
         <% end %>
         </tbody>
     </table>
-    <button type="button" class="btn btn-secondary"><a class="link-light" href="canoe_edit.html">Add new canoe</a></button>
+    <%= link_to "Add new canoe", '/canoes/new', class: "btn btn-secondary link-light" %>
 </div>

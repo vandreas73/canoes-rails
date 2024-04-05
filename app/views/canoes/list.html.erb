@@ -1,2 +1,32 @@
-<h1>Canoes#list</h1>
-<p>Find me in app/views/canoes/list.html.erb</p>
+<h1>Canoes</h1>
+
+<div class="container">
+    <h2>Canoes</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Max. Crew</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @canoes.each do |canoe| %>
+            <tr>
+                <td><%= canoe.name %></td>
+                <td><%= canoe.max_crew %></td>
+                <td>
+                    <%= link_to "Crew", '/crew/list', class: "btn btn-primary btn-sm" %>
+                </td>
+                <td>
+                    <%= link_to "Edit", '/canoe/edit', class: "btn btn-warning btn-sm link-light" %>
+                </td>
+                <td>
+                    <%= link_to "Delete", '/canoe/del', class: "btn btn-danger btn-sm" %>
+                </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-secondary"><a class="link-light" href="canoe_edit.html">Add new canoe</a></button>
+</div>

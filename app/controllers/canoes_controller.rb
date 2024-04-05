@@ -1,4 +1,7 @@
 class CanoesController < ApplicationController
   def list
+    canoe1 = Canoe.new(name: "Canoe 1", max_crew: 2)
+    canoe2 = Canoe.new(name: "Canoe 2", max_crew: 4)
+    @canoes = [canoe1, canoe2]
   end
 end

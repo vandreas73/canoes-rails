@@ -1,0 +1,2 @@
+class Canoe < ApplicationRecord
+end

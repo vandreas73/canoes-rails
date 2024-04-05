@@ -10,5 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 0) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_26_121200) do
+  create_table "canoes", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.string "name"
+    t.integer "max_crew"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "competitions", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.string "name"
+    t.date "date"
+    t.bigint "canoe_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["canoe_id"], name: "index_competitions_on_canoe_id"
+  end
+
+  create_table "crew_members", charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.bigint "canoe_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["canoe_id"], name: "index_crew_members_on_canoe_id"
+  end
+
+  add_foreign_key "competitions", "canoes", column: "canoe_id"
+  add_foreign_key "crew_members", "canoes", column: "canoe_id"
 end

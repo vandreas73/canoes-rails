@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+div#content {
+    padding: 25px;
+    width: 100%;
+    float: left;
+    background: #cccccc;
+}
+div#footer
+{
+    height: 100px;
+    background: #ddd;
+    clear: both;
+    text-align: center;
+}

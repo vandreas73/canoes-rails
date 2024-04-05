@@ -1,0 +1,34 @@
+
+<div class="container">
+    <h2>Canoes</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Max. Crew</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @canoes.each do |canoe| %>
+            <tr>
+                <td><%= canoe.name %></td>
+                <td><%= canoe.max_crew %></td>
+                <td>
+                    <%= link_to "Crew", '/crew/index', class: "btn btn-primary btn-sm" %>
+                </td>
+                <td>
+                    <%= link_to "Competitions", '/competitions/index', class: "btn btn-primary btn-sm" %>
+                </td>
+                <td>
+                    <%= link_to "Edit", '/canoes/edit', class: "btn btn-warning btn-sm link-light" %>
+                </td>
+                <td>
+                    <%= link_to "Delete", '/canoes/del', class: "btn btn-danger btn-sm" %>
+                </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+    <%= link_to "Add new canoe", '/canoes/new', class: "btn btn-secondary link-light" %>
+</div>

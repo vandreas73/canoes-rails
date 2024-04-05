@@ -1,0 +1,27 @@
+<div class="container">
+        <h2>Crew</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% @crew.each do |crew_member| %>
+                <tr>
+                    <td><%= crew_member.name %></td>
+                    <td><%= crew_member.age %></td>
+                    <td>
+                        <%= link_to "Edit", "/crew/edit", class: "btn btn-warning btn-sm link-light" %>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+        <%= link_to "Add new crew member", '/crew/new', class: "btn btn-secondary link-light" %> <br><br>
+        <%= link_to "Back to the canoes", '/', class: "btn btn-primary" %>
+    </div>

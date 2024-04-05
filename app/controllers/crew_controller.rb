@@ -6,6 +6,7 @@ class CrewController < ApplicationController
   end
 
   def new
+    @crew_member = CrewMember.new
   end
 
   def edit

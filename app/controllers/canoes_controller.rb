@@ -12,4 +12,5 @@ class CanoesController < ApplicationController
   def edit
     @canoe = Canoe.new name: 'Tina', max_crew: 4
   end
+
 end

@@ -6,6 +6,7 @@ class CompetitionsController < ApplicationController
   end
 
   def new
+    @competition = Competition.new
   end
 
   def edit

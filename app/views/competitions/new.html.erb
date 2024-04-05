@@ -1,2 +1,23 @@
-<h1>Competition#new</h1>
-<p>Find me in app/views/competition/new.html.erb</p>
+<div class="container mt-3">
+        <div class="card border-primary mb-3">
+            <div class="card-header text-white bg-primary">Create competition</div>
+            <div class="card-body">
+                <%= form_for @competition, url: 'competitions/create', method: :post do |form| %>
+                    <div class="mb-3">
+                        <%= form.label :name, class: 'form-label' %>
+                        <%= form.text_field :name, class: 'form-control' %>
+                    </div>
+                    <div class="mb-3">
+                        <%= form.label :date, class: 'form-label' %>
+                        <%= form.date_field :date, class: 'form-control' %>
+                    </div>
+                    <div class="d-flex justify-content-between align-items- gap-2">
+                        <div>
+                            <%= form.submit 'Save', class: 'btn btn-success' %>
+                            <%= link_to "Cancel", :back, class: "btn btn-warning link-light" %>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>

@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'competitions/index'
+  get 'competitions/:canoe_id/index', to: 'competitions#index', as: 'competition_index'
   get 'competitions/new'
-  get 'competitions/edit'
-  get 'crew/index'
+  get 'competitions/edit/:id', to: 'competitions#edit', as: 'edit_competition'
+  get 'crew/:canoe_id/index', to: 'crew#index', as: 'crew_index'
   get 'crew/new'
-  get 'crew/edit'
+  get 'crew/edit/:id', to: 'crew#edit', as: 'edit_crew'
   get 'canoes/new'
-  get 'canoes/edit'
+  get 'canoes/edit/:id', to: 'canoes#edit', as: 'edit_canoe'
   get 'canoes/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

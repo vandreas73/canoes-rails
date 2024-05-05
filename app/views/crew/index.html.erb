@@ -13,7 +13,7 @@
                     <td><%= crew_member.name %></td>
                     <td><%= crew_member.age %></td>
                     <td>
-                        <%= link_to "Edit", "/crew/edit", class: "btn btn-warning btn-sm link-light" %>
+                        <%= link_to "Edit", edit_crew_path(crew_member.id), class: "btn btn-warning btn-sm link-light" %>
                     </td>
                     <td>
                         <button type="button" class="btn btn-danger btn-sm">Delete</button>

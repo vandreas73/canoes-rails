@@ -1,8 +1,6 @@
 class CanoesController < ApplicationController
   def index
-    canoe1 = Canoe.new(name: "Canoe 1", max_crew: 2)
-    canoe2 = Canoe.new(name: "Canoe 2", max_crew: 4)
-    @canoes = [canoe1, canoe2]
+    @canoes = Canoe.all
   end
 
   def new
@@ -10,7 +8,7 @@ class CanoesController < ApplicationController
   end
 
   def edit
-    @canoe = Canoe.new name: 'Tina', max_crew: 4
+    @canoe = Canoe.find(params[:id])
   end
 
 end

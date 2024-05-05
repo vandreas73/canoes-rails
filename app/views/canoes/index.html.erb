@@ -15,13 +15,13 @@
                 <td><%= canoe.name %></td>
                 <td><%= canoe.max_crew %></td>
                 <td>
-                    <%= link_to "Crew", '/crew/index', class: "btn btn-primary btn-sm" %>
+                    <%= link_to "Crew", crew_index_path(canoe), class: "btn btn-primary btn-sm" %>
                 </td>
                 <td>
-                    <%= link_to "Competitions", '/competitions/index', class: "btn btn-primary btn-sm" %>
+                    <%= link_to "Competitions", competition_index_path(canoe.id), class: "btn btn-primary btn-sm" %>
                 </td>
                 <td>
-                    <%= link_to "Edit", '/canoes/edit', class: "btn btn-warning btn-sm link-light" %>
+                    <%= link_to "Edit", edit_canoe_path(canoe), class: "btn btn-warning btn-sm link-light" %>
                 </td>
                 <td>
                     <%= link_to "Delete", '/canoes/del', class: "btn btn-danger btn-sm" %>

@@ -1,8 +1,6 @@
 class CrewController < ApplicationController
   def index
-    crew_member1 = CrewMember.new(name: 'András Vesztergombi', age: 22)
-    crew_member2 = CrewMember.new(name: 'Gábor Szabó', age: 25)
-    @crew = [crew_member1, crew_member2]
+    @crew = CrewMember.where(canoe_id: params[:canoe_id])
   end
 
   def new
@@ -10,9 +8,13 @@ class CrewController < ApplicationController
   end
 
   def edit
-    @crew_member = CrewMember.new(name: 'András Vesztergombi', age: 22)
+    @crew_member = CrewMember.find(params[:id])
   end
 
   def del
+  end
+
+  def update
+    @crew_member.update(name: params[:name], age: params[:age])
   end
 end

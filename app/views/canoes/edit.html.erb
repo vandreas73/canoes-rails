@@ -2,7 +2,7 @@
     <div class="card border-primary mb-3">
         <div class="card-header text-white bg-primary">Edit canoe</div>
         <div class="card-body">
-            <%= form_for @canoe, url: '/canoes/update', method: :put do |form| %>
+            <%= form_for @canoe, url: update_canoe_path(@canoe.id), method: :put do |form| %>
                 <div class="mb-3">
                     <%= form.label :name, class: 'form-label' %>
                     <%= form.text_field :name, class: 'form-control' %>
@@ -17,7 +17,7 @@
                         <%= link_to "Cancel", :back, class: 'btn btn-warning link-light' %>
                     </div>
                     <div>
-                        <button type="button" class="btn btn-danger"><a class="link-light" href="canoes.html">Delete</a></button>
+                        <%# <%= buttont_to "Delete", @canoe, method: :delete, class: "link-light" %> %>
                     </div>
                 </div>
             <% end %>

@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get 'crew/edit/:id', to: 'crew#edit', as: 'edit_crew'
   get 'canoes/new'
   get 'canoes/edit/:id', to: 'canoes#edit', as: 'edit_canoe'
-  get 'canoes/index'
+  get 'canoes/index', to: 'canoes#index', as: 'canoes_index'
+  put 'canoes/update/:id', to: 'canoes#update', as: 'update_canoe'
+  post 'canoes/create', to: 'canoes#create', as: 'create_canoe'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

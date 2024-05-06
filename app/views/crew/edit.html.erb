@@ -2,7 +2,7 @@
     <div class="card border-primary mb-3">
         <div class="card-header text-white bg-primary">Edit crew member</div>
             <div class="card-body">
-                <%= form_for @crew_member, url: '/crew/update', method: :put do |form| %>
+                <%= form_for @crew_member, url: update_crew_member_path(@crew_member.id), method: :put do |form| %>
                     <div class="mb-3">
                         <%= form.label :name, class: 'form-label' %>
                         <%= form.text_field :name, class: 'form-control' %>

@@ -17,7 +17,8 @@ class CanoesController < ApplicationController
     redirect_to canoes_index_path
   end
 
-  def destroy
+  def delete
+    @canoe=Canoe.find(params[:id])
     @canoe.destroy!
   end
 

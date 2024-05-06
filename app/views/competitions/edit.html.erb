@@ -2,7 +2,7 @@
         <div class="card border-primary mb-3">
             <div class="card-header text-white bg-primary">Edit competition</div>
             <div class="card-body">
-                <%= form_for @competition, url: 'competitions/update', method: :put do |form| %>
+                <%= form_for @competition, url: update_competition_path(@competition.id), method: :put do |form| %>
                     <div class="mb-3">
                         <%= form.label :name, class: 'form-label' %>
                         <%= form.text_field :name, class: 'form-control' %>

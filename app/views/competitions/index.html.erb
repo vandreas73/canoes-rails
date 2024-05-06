@@ -1,27 +1,27 @@
 <div class="container">
-        <h2>Competitions</h2>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Date</th>
-                </tr>
-            </thead>
-            <tbody>
-            <% @competitions.each do |competition| %>
-                <tr>
-                    <td><%= competition.name %></td>
-                    <td><%= competition.date %></td>
-                    <td>
-                        <%= link_to "Edit", edit_competition_path(competition), class: "btn btn-warning btn-sm link-light" %>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-            <% end %>
-            </tbody>
-        </table>
-        <%= link_to "Add new competition", '/competitions/new', class: "btn btn-secondary link-light" %> <br><br>
-        <%= link_to "Back to the canoes", '/', class: "btn btn-primary" %>
-    </div>
+    <h2>Competitions</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @competitions.each do |competition| %>
+            <tr>
+                <td><%= competition.name %></td>
+                <td><%= competition.date %></td>
+                <td>
+                    <%= link_to "Edit", edit_competition_path(competition), class: "btn btn-warning btn-sm link-light" %>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                </td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+    <%= link_to "Add new competition", new_competition_path(params[:canoe_id]), class: "btn btn-secondary link-light" %> <br><br>
+    <%= link_to "Back to the canoes", '/', class: "btn btn-primary" %>
+</div>

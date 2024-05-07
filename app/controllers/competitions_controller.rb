@@ -23,6 +23,12 @@ class CompetitionsController < ApplicationController
     redirect_to competition_index_path(params[:canoe_id])
   end
 
+  def destroy
+    @competition = Competition.find(params[:id])
+    @competition.destroy!
+    redirect_to competition_index_path(params[:canoe_id])
+  end
+
   private
     def competition_params
       params.require(:competition).permit(:name, :date, :canoe_id)

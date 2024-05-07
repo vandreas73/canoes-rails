@@ -16,7 +16,7 @@
                     <%= link_to "Edit", edit_competition_path(competition), class: "btn btn-warning btn-sm link-light" %>
                 </td>
                 <td>
-                    <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                    <%= button_to "Delete", destroy_competition_path(competition.canoe_id, competition.id), method: :delete, class: "btn btn-danger btn-sm" %>
                 </td>
             </tr>
         <% end %>

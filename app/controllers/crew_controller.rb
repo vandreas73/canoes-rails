@@ -27,6 +27,12 @@ class CrewController < ApplicationController
     redirect_to crew_index_path(params[:canoe_id])
   end
 
+  def destroy
+    @crew_member = CrewMember.find(params[:id])
+    @crew_member.destroy!
+    redirect_to crew_index_path(@crew_member.canoe_id)
+  end
+
   private
     def crew_member_params
       params.require(:crew_member).permit(:name, :age, :canoe_id)

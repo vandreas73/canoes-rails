@@ -24,7 +24,7 @@
                     <%= link_to "Edit", edit_canoe_path(canoe), class: "btn btn-warning btn-sm link-light" %>
                 </td>
                 <td>
-                    <%= link_to "Delete", delete_canoe_path(canoe), class: "btn btn-danger btn-sm", method: :delete %>
+                    <%= button_to "Delete", destroy_canoe_path(canoe), method: :delete, class: "btn btn-danger btn-sm" %>
                 </td>
             </tr>
         <% end %>

@@ -4,17 +4,19 @@ Rails.application.routes.draw do
   get 'competitions/edit/:id', to: 'competitions#edit', as: 'edit_competition'
   put 'competitions/update/:id', to: 'competitions#update', as: 'update_competition'
   post 'competitions/:canoe_id/create', to: 'competitions#create', as: 'create_competition'
+  delete 'competitions/:canoe_id/del/:id', to: 'competitions#destroy', as: 'destroy_competition'
   get 'crew/:canoe_id/index', to: 'crew#index', as: 'crew_index'
-  get 'canoes/new'
   post 'crew/:canoe_id/create', to: 'crew#create', as: 'create_crew_member'
   put 'crew/update/:id', to: 'crew#update', as: 'update_crew_member'
   get 'crew/edit/:id', to: 'crew#edit', as: 'edit_crew'
   get 'crew/:canoe_id/new', to: 'crew#new', as: 'new_crew_member'
+  delete 'crew/:cano_id/del/:id', to: 'crew#destroy', as: 'destroy_crew_member'
+  get 'canoes/new'
   get 'canoes/edit/:id', to: 'canoes#edit', as: 'edit_canoe'
   get 'canoes/index', to: 'canoes#index', as: 'canoes_index'
   put 'canoes/update/:id', to: 'canoes#update', as: 'update_canoe'
   post 'canoes/create', to: 'canoes#create', as: 'create_canoe'
-  delete 'canoes/del/:id', to: 'canoes#delete', as: 'delete_canoe'
+  delete 'canoes/del/:id', to: 'canoes#destroy', as: 'destroy_canoe'
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

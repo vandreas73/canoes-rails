@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  max_crew: 1
+  name: Tina
+  max_crew: 4
+  created_at: 2024-01-01
+  updated_at: 2024-01-01
 
 two:
-  name: MyString
-  max_crew: 1
+  name: Grébec
+  max_crew: 3
+  created_at: 2024-01-01
+  updated_at: 2024-01-01

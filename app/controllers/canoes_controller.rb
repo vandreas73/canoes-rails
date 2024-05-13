@@ -19,14 +19,14 @@ class CanoesController < ApplicationController
 
   def destroy
     @canoe=Canoe.find(params[:id])
-    canoe_crew = CrewMember.where(canoe_id: @canoe.id)
-    canoe_crew.each do |crew_member|
-      crew_member.destroy!
-    end
-    canoe_competition = Competition.where(canoe_id: @canoe.id)
-    canoe_competition.each do |competition|
-      competition.destroy!
-    end
+    # canoe_crew = CrewMember.where(canoe_id: @canoe.id)
+    # canoe_crew.each do |crew_member|
+    #   crew_member.destroy!
+    # end
+    # canoe_competition = Competition.where(canoe_id: @canoe.id)
+    # canoe_competition.each do |competition|
+    #   competition.destroy!
+    # end
     @canoe.destroy!
     redirect_to canoes_index_path
   end

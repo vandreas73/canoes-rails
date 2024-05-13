@@ -1,11 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
+  name: World Cup
   date: 2024-03-26
   canoe: one
+  created_at: 2024-01-01
+  updated_at: 2024-01-01
 
 two:
-  name: MyString
-  date: 2024-03-26
+  name: Laudetour
+  date: 2024-03-28
   canoe: two
+  created_at: 2024-01-01
+  updated_at: 2024-01-01
+

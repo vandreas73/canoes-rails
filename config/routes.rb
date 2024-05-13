@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get 'crew/edit/:id', to: 'crew#edit', as: 'edit_crew'
   get 'crew/:canoe_id/new', to: 'crew#new', as: 'new_crew_member'
   delete 'crew/:cano_id/del/:id', to: 'crew#destroy', as: 'destroy_crew_member'
-  get 'canoes/new'
+  get 'canoes/new', to: 'canoes#new', as: 'new_canoe'
   get 'canoes/edit/:id', to: 'canoes#edit', as: 'edit_canoe'
   get 'canoes/index', to: 'canoes#index', as: 'canoes_index'
   put 'canoes/update/:id', to: 'canoes#update', as: 'update_canoe'

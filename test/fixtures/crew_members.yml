@@ -1,11 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  age: 1
+  name: András
+  age: 22
   canoe: one
+  created_at: 2024-01-01
+  updated_at: 2024-01-01
 
 two:
-  name: MyString
-  age: 1
+  name: Gábor
+  age: 40
   canoe: two
+  created_at: 2024-01-01
+  updated_at: 2024-01-01
